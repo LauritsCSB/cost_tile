@@ -1,0 +1,15 @@
+/Users/Cecilie/Projects/new_flooring/obj/Debug/net7.0/new_flooring.csproj.AssemblyReference.cache
+/Users/Cecilie/Projects/new_flooring/obj/Debug/net7.0/new_flooring.GeneratedMSBuildEditorConfig.editorconfig
+/Users/Cecilie/Projects/new_flooring/obj/Debug/net7.0/new_flooring.AssemblyInfoInputs.cache
+/Users/Cecilie/Projects/new_flooring/obj/Debug/net7.0/new_flooring.AssemblyInfo.cs
+/Users/Cecilie/Projects/new_flooring/obj/Debug/net7.0/new_flooring.csproj.CoreCompileInputs.cache
+/Users/Cecilie/Projects/new_flooring/bin/Debug/net7.0/new_flooring
+/Users/Cecilie/Projects/new_flooring/bin/Debug/net7.0/new_flooring.deps.json
+/Users/Cecilie/Projects/new_flooring/bin/Debug/net7.0/new_flooring.runtimeconfig.json
+/Users/Cecilie/Projects/new_flooring/bin/Debug/net7.0/new_flooring.dll
+/Users/Cecilie/Projects/new_flooring/bin/Debug/net7.0/new_flooring.pdb
+/Users/Cecilie/Projects/new_flooring/obj/Debug/net7.0/new_flooring.dll
+/Users/Cecilie/Projects/new_flooring/obj/Debug/net7.0/refint/new_flooring.dll
+/Users/Cecilie/Projects/new_flooring/obj/Debug/net7.0/new_flooring.pdb
+/Users/Cecilie/Projects/new_flooring/obj/Debug/net7.0/new_flooring.genruntimeconfig.cache
+/Users/Cecilie/Projects/new_flooring/obj/Debug/net7.0/ref/new_flooring.dll

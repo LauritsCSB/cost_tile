@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 25.0.1704.2
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "new_flooring", "new_flooring.csproj", "{FCD16401-DF49-4F4C-A01B-CE224C5470E6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FCD16401-DF49-4F4C-A01B-CE224C5470E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FCD16401-DF49-4F4C-A01B-CE224C5470E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FCD16401-DF49-4F4C-A01B-CE224C5470E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FCD16401-DF49-4F4C-A01B-CE224C5470E6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {48D35EBE-973D-4EBB-B35C-06B5855A84F3}
+	EndGlobalSection
+EndGlobal
