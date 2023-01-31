@@ -34,12 +34,19 @@ namespace newFlooring
             OutputMessage(area);
         }
 
+        /// <summary>
+        /// Prints a welcome messages to the usear and describes the program
+        /// </summary>
         static void IntroMessage()
         {
             Console.WriteLine("Hello User, this program can calculate the cost of flooring work when given a few inputs.");
             Console.WriteLine("It can only be used with the following shapes: triangle and rectangle (square/ parallelogram)");
         }
 
+        /// <summary>
+        /// Calculates and prints the total cost to the user after asking if they want an average hourly cost or use their own
+        /// </summary>
+        /// <param name="area">Area of the given room</param>
         static void OutputMessage(double area)
         {
             Console.WriteLine("Please enter the cost of labour per hour, if you dont know, an average will be used: ");
@@ -57,6 +64,10 @@ namespace newFlooring
             }
         }
 
+        /// <summary>
+        /// Asks the user to input the amount of corners in the room and saves it in local variable
+        /// </summary>
+        /// <returns>User input as integer</returns>
         static int UserCorners()
         {
             Console.WriteLine("Please enter a valid number of corners in the room: ");
@@ -64,6 +75,10 @@ namespace newFlooring
             return corners;
         }
 
+        /// <summary>
+        /// Asks the user to input the price of a single unit of flooring
+        /// </summary>
+        /// <returns>User input as integer</returns>
         static double UserCostPerUnit()
         {
             Console.WriteLine("Please enter the cost pr. unit of flooring: ");
@@ -71,6 +86,10 @@ namespace newFlooring
             return costPerUnit;
         }
 
+        /// <summary>
+        /// Asks user for measurements and calculates area
+        /// </summary>
+        /// <returns>Area as integer</returns>
         static double AreaOfTriangle()
         {
             Console.WriteLine("Input length of base: ");
@@ -83,6 +102,10 @@ namespace newFlooring
             return a;
         }
 
+        /// <summary>
+        /// Asks user for measurements and calculates area
+        /// </summary>
+        /// <returns>Area as integer</returns>
         static double AreaOfSquare()
         {
             Console.WriteLine("Please enter the width of the floor: ");
