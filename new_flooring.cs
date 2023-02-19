@@ -1,4 +1,8 @@
-﻿using System;
+﻿//TODO Make user input own area or ask to help calculate.
+//TODO Include (almost) all common shapes, use dictionary like slot machine?
+//TODO Change ui, dont focus on rooms, but surfaces.
+//TODO Use square meter in ui
+//TODO User costpersquremeter in calculation
 
 namespace newFlooring
 {
