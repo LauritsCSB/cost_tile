@@ -10,16 +10,13 @@ namespace newFlooring
         static void Main(string[] args)
         {
             double hourlyCost = COSTPERHOUR;
+            double area = 0;
             IntroMessage();
 
-            int amountOfCorners = UserCorners();
+            //Take corners
+            int amountOfCorners = UserCorners();            
 
-            while (amountOfCorners != 3 && amountOfCorners != 4)
-            {
-                amountOfCorners = UserCorners();
-            }
-
-            double area = 0;
+            //Take cost per unit of flooring
             double costPerUnit = UserCostPerUnit();
 
             if (amountOfCorners == 3)
@@ -31,47 +28,59 @@ namespace newFlooring
                 area = AreaOfSquare();
             }
 
-            OutputMessage(area);
+            OutputMessage(area, hourlyCost, SQUAREFEETPERHOUR);
         }
 
         /// <summary>
-        /// Prints a welcome messages to the usear and describes the program
+        /// Prints a welcome messages to the user and describes the program
         /// </summary>
         static void IntroMessage()
         {
             Console.WriteLine("Hello User, this program can calculate the cost of flooring work when given a few inputs.");
-            Console.WriteLine("It can only be used with the following shapes: triangle and rectangle (square/ parallelogram)");
+            Console.WriteLine("It can only be used with the following shapes: triangle and rectangle (square/ parallelogram).");
         }
 
         /// <summary>
         /// Calculates and prints the total cost to the user after asking if they want an average hourly cost or use their own
         /// </summary>
-        /// <param name="area">Area of the given room</param>
-        static void OutputMessage(double area)
+        /// <param name="area">Area of room</param>
+        /// <param name="hourlycost">Labour cost per hour</param>
+        /// <param name="squarFeetPerHour">Amount of flooring per hour done by workers</param>
+        static void OutputMessage(double area, double costPerHour, int squarFeetPerHour)
         {
-            Console.WriteLine("Please enter the cost of labour per hour, if you dont know, an average will be used: ");
-            double hourlyCost = Convert.ToInt32(Console.ReadLine());
-
-            if (hourlyCost.Equals(null))
+            Console.WriteLine("Please enter the cost of labour per hour: ");
+            
+            if (double.TryParse(Console.ReadLine(), out costPerHour))
             {
-                double cost = area / SQUAREFEETPERHOUR * COSTPERHOUR;
+                double cost = area / squarFeetPerHour * costPerHour;
                 Console.WriteLine($"The total cost is: {cost}.");
             }
             else
             {
-                double cost = area / SQUAREFEETPERHOUR * hourlyCost;
-                Console.WriteLine($"The total cost is: {cost}.");
+                OutputMessage(area, costPerHour, squarFeetPerHour);
             }
+
         }
 
         /// <summary>
-        /// Asks the user to input the amount of corners in the room and saves it in local variable
+        /// Takes input checks if its supported by program and returns corners value
         /// </summary>
         /// <returns>User input as integer</returns>
         static int UserCorners()
         {
+            int corners;
             Console.WriteLine("Please enter a valid number of corners in the room: ");
-            int corners = Convert.ToInt32(Console.ReadLine());
+            if (int.TryParse(Console.ReadLine(), out corners))
+            {
+                while (corners != 3 && corners != 4)
+                {
+                    corners = UserCorners();
+                }
+            }
+            else
+            {
+                UserCorners();
+            }
             return corners;
         }
 
@@ -81,8 +90,16 @@ namespace newFlooring
         /// <returns>User input as integer</returns>
         static double UserCostPerUnit()
         {
+            double costPerUnit;
             Console.WriteLine("Please enter the cost pr. unit of flooring: ");
-            double costPerUnit = Convert.ToDouble(Console.ReadLine());
+            if (double.TryParse(Console.ReadLine(), out costPerUnit))
+            {
+                
+            }
+            else
+            {
+                UserCostPerUnit();
+            }
             return costPerUnit;
         }
 
