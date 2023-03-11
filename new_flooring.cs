@@ -4,6 +4,8 @@
 //TODO Use square meter in ui
 //TODO User costpersquremeter in calculation
 
+using new_flooring;
+
 namespace newFlooring
 {
     class Program
@@ -15,10 +17,15 @@ namespace newFlooring
         {
             double hourlyCost = COSTPERHOUR;
             double area = 0;
-            IntroMessage();
+            UIMethods.IntroMessage();
 
             //Take corners
-            int amountOfCorners = UserCorners();            
+            int amountOfCorners = UIMethods.AskForCorners();
+
+            while (amountOfCorners != 3 && amountOfCorners != 4)
+            {
+                amountOfCorners = UIMethods.AskForCorners();
+            }
 
             //Take cost per unit of flooring
             double costPerUnit = UserCostPerUnit();
@@ -33,15 +40,6 @@ namespace newFlooring
             }
 
             OutputMessage(area, hourlyCost, SQUAREFEETPERHOUR);
-        }
-
-        /// <summary>
-        /// Prints a welcome messages to the user and describes the program
-        /// </summary>
-        static void IntroMessage()
-        {
-            Console.WriteLine("Hello User, this program can calculate the cost of flooring work when given a few inputs.");
-            Console.WriteLine("It can only be used with the following shapes: triangle and rectangle (square/ parallelogram).");
         }
 
         /// <summary>
@@ -64,28 +62,6 @@ namespace newFlooring
                 OutputMessage(area, costPerHour, squarFeetPerHour);
             }
 
-        }
-
-        /// <summary>
-        /// Takes input checks if its supported by program and returns corners value
-        /// </summary>
-        /// <returns>User input as integer</returns>
-        static int UserCorners()
-        {
-            int corners;
-            Console.WriteLine("Please enter a valid number of corners in the room: ");
-            if (int.TryParse(Console.ReadLine(), out corners))
-            {
-                while (corners != 3 && corners != 4)
-                {
-                    corners = UserCorners();
-                }
-            }
-            else
-            {
-                UserCorners();
-            }
-            return corners;
         }
 
         /// <summary>
